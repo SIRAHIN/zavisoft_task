@@ -10,6 +10,7 @@ class ProductCubit extends Cubit<ProductState> {
   ProductCubit(this.repository)
     : super(ProductState(productMap: {}, categoryType: [], isLoading: false));
 
+  // Get Category
   Future<void> getCategory() async {
     emit(state.copyWith(isLoading: true));
 
@@ -22,6 +23,7 @@ class ProductCubit extends Cubit<ProductState> {
     });
   }
 
+  // Get Products
   Future<void> getProducts(String cat) async {
     if (state.productMap[cat]?.products.isNotEmpty == true) return;
 
@@ -50,6 +52,7 @@ class ProductCubit extends Cubit<ProductState> {
     }
   }
 
+  // Refresh Product Data
   Future<void> refreshProductData(String cat) async {
     emit(
       state.copyWith(

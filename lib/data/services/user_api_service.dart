@@ -4,7 +4,7 @@ import 'package:awesome_dio_interceptor/awesome_dio_interceptor.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
-import 'package:zavisoft_task/core/routes/endpoints/api_endpoints.dart';
+import 'package:zavisoft_task/core/endpoints/api_endpoints.dart';
 import 'package:zavisoft_task/models/error_response_model/error_response.dart';
 import 'package:zavisoft_task/models/product_response/product_response.dart';
 

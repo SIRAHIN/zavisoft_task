@@ -1,6 +1,3 @@
-
-
-
 import 'package:zavisoft_task/models/product_response/product_response.dart';
 
 class ProductState {

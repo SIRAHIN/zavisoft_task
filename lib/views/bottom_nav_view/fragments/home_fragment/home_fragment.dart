@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zavisoft_task/viewmodels/cubit/product_cubit.dart';
 import 'package:zavisoft_task/viewmodels/cubit/product_state.dart';
 import 'package:zavisoft_task/views/bottom_nav_view/fragments/home_fragment/widgets/banner_widget.dart';
-import 'package:zavisoft_task/views/bottom_nav_view/fragments/home_fragment/widgets/product_card.dart';
+import 'package:zavisoft_task/views/bottom_nav_view/fragments/home_fragment/widgets/product_holder.dart';
 
 class HomeFragment extends StatefulWidget {
   const HomeFragment({super.key});
@@ -60,15 +60,16 @@ class _HomeFragmentState extends State<HomeFragment>
       body: SafeArea(
         top: true,
         bottom: true,
+
+        // NestedScrollView is the main who is own the vertical scroll of the screen \\
         child: NestedScrollView(
-          floatHeaderSlivers: true,
           headerSliverBuilder: (context, innerBoxIsScrolled) => [
-            // Pinned Search Bar
+            
+            // Pinned Search Bar \\
             SliverAppBar(
               backgroundColor: Colors.white,
               floating: false,
               pinned: true,
-              elevation: innerBoxIsScrolled ? 4 : 0,
               titleSpacing: 12,
               title: TextField(
                 decoration: InputDecoration(
@@ -113,7 +114,7 @@ class _HomeFragmentState extends State<HomeFragment>
               ),
             ),
 
-            //  Banner
+            // Banner
             const SliverToBoxAdapter(
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -121,7 +122,7 @@ class _HomeFragmentState extends State<HomeFragment>
               ),
             ),
 
-            //  Pinned TabBar
+            // Pinned TabBar
             SliverAppBar(
               pinned: true,
               floating: false,
@@ -173,7 +174,7 @@ class _HomeFragmentState extends State<HomeFragment>
               return TabBarView(
                 controller: _tabController,
                 children: state.categoryType.map((cat) {
-                  return ProductCard(category: cat);
+                  return ProductHolder(category: cat);
                 }).toList(),
               );
             },

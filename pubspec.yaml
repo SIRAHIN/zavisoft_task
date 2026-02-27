@@ -52,6 +52,7 @@ dev_dependencies:
   injectable_generator: ^2.4.0
   json_serializable: ^6.7.1
   freezed: ^2.5.2
+  flutter_launcher_icons:
   build_runner: ^2.4.10  
 
   # The "flutter_lints" package below contains a set of recommended lints to
@@ -101,3 +102,10 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/launcher_icon.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/images/launcher_icon.png"
+  remove_alpha_ios: true
