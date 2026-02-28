@@ -20,7 +20,7 @@ class RouteManager {
       GoRoute(
       name: mainNavViewName,
       path: mainNavViewPath, 
-      builder: (context, state) => const MainNavView(),)
+      builder: (context, state) =>  MainNavView(),)
     ],
   );
 }

@@ -29,6 +29,7 @@ class _SplashViewState extends State<SplashView>
 
     _controller.forward();
 
+    // Check if user is logged in
     Future.delayed(const Duration(seconds: 3), () async {
       if (mounted) {
         if (await AuthCacheManager.getToken() != null) {
