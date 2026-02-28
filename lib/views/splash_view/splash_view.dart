@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:zavisoft_task/core/cache/auth_cache_manager.dart';
 import 'package:zavisoft_task/core/paths/assets_path.dart';
 import 'package:zavisoft_task/core/routes/route_manager.dart';
 
@@ -28,9 +29,13 @@ class _SplashViewState extends State<SplashView>
 
     _controller.forward();
 
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () async {
       if (mounted) {
-        context.goNamed(loginViewName);
+        if (await AuthCacheManager.getToken() != null) {
+          context.goNamed(mainNavViewName);
+        } else {
+          context.goNamed(loginViewName);
+        }
       }
     });
   }

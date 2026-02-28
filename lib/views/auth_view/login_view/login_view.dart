@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:zavisoft_task/core/cache/auth_cache_manager.dart';
 import 'package:zavisoft_task/core/paths/assets_path.dart';
 import 'package:zavisoft_task/core/routes/route_manager.dart';
 
@@ -32,6 +33,8 @@ class _LoginViewState extends State<LoginView> {
     _isLoading.value = true;
     await Future.delayed(const Duration(seconds: 2));
     if (mounted) _isLoading.value = false;
+    await AuthCacheManager.setToken(token: "1234567890");
+    await AuthCacheManager.setUserEmail(email: _emailController.text);
     RouteManager.router.goNamed(mainNavViewName);
   }
 

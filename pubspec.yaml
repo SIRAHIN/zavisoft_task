@@ -45,6 +45,7 @@ dependencies:
   dartz: ^0.10.1
   go_router: ^14.1.4
   awesome_dio_interceptor: ^1.3.0
+  flutter_secure_storage: ^10.0.0
 
 dev_dependencies:
   flutter_test:
