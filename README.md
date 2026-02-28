@@ -69,3 +69,22 @@ I tried using `CustomScrollView` with `SliverAppBar` and `SliverFillRemaining` (
 The core task requirement — one vertical scroll, collapsible header, sticky tab bar — points to `NestedScrollView` as the correct architecture. The scroll position limitation is a known trade-off of this approach in Flutter.
 
 A production solution would require a custom `ScrollController` that synchronizes the inner and outer scroll positions manually, or a state management approach that stores and restores the exact scroll offset when a tab becomes active again.
+
+
+## 📱 App Screenshots  
+
+## Splash Screen
+<img width="250" alt="Simulator Screenshot - iPhone 16 Plus - 2026-02-28 at 01 13 23" src="https://github.com/user-attachments/assets/51ba9f65-e160-4a4e-a359-2084ec12b444" />
+
+## Login Page
+<img width="250" alt="Simulator Screenshot - iPhone 16 Plus - 2026-02-28 at 01 13 25" src="https://github.com/user-attachments/assets/ea4a8ae1-e383-4e97-9724-1b8c1919818e" />
+
+## Home Page
+<img width="250" alt="Simulator Screenshot - iPhone 16 Plus - 2026-02-28 at 01 13 02" src="https://github.com/user-attachments/assets/10471304-1cf8-4bfd-b353-f54462184567" />
+<img width="250" alt="Simulator Screenshot - iPhone 16 Plus - 2026-02-28 at 01 13 05" src="https://github.com/user-attachments/assets/80e6d795-de81-4a32-895e-485fcac42dae" />
+
+## Account Page
+<img width="250" alt="Simulator Screenshot - iPhone 16 Plus - 2026-02-28 at 12 31 43" src="https://github.com/user-attachments/assets/affa30e3-1f78-423d-a2ec-f6941fc87c36" />
+
+
+
