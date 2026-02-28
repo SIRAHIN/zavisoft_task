@@ -1,3 +1,14 @@
+## Flutter & SDK Version
+
+This project uses **FVM** (Flutter Version Management) for SDK consistency across developers and CI.  
+**Required FVM Flutter SDK Version:** `3.38.7`
+
+> **How to use FVM:**
+> 1. [Install FVM](https://fvm.app/docs/getting_started/installation) if you don’t have it installed.
+> 2. Run `fvm install` in the project root to download the correct Flutter version.
+> 3. Use FVM for running commands, e.g. `fvm flutter pub get`, `fvm flutter run`.
+
+
 # Zavisoft Flutter Task — Daraz-Style Product Listing
 
 ---
@@ -85,6 +96,5 @@ A production solution would require a custom `ScrollController` that synchronize
 
 ## Account Page
 <img width="250" alt="Simulator Screenshot - iPhone 16 Plus - 2026-02-28 at 12 31 43" src="https://github.com/user-attachments/assets/affa30e3-1f78-423d-a2ec-f6941fc87c36" />
-
 
 
